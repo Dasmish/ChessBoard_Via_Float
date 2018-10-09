@@ -1,0 +1,49 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100vh;
+}
+
+body{
+	min-height: 10vh; 
+	background-color: #eaeaea;
+}
+
+.main__container{
+	background: #FFF;
+	margin: 135px;
+	box-shadow: 0 0 20px 3px #e1e1e1;
+	border: 1px solid #000;
+}
+/* Почему родителю можно указать это и все будет работать так же как и с before/after??????*/
+						/* overflow: hidden; */
+
+.main__container:before,
+.main__container:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.main__container:after {
+    clear: both;
+}
+
+.chessboard{
+	width: 12.5%;
+	float: left;
+	border: 1px solid #000;
+	height: 150px;
+}
+
+.black__cell{
+	background-color: rgb(181, 136, 98);
+}
+.white__cell{
+	background-color: rgb(240, 217, 181);
+}
